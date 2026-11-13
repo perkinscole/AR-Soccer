@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>AR Soccer</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="overlay">
+      <div id="top">
+        <span id="xr-note"></span>
+        <div id="xr-buttons"></div>
+      </div>
+      <div id="hint">
+        <b>Move</b> <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> &nbsp; <b>Sprint</b> <kbd>Shift</kbd><br />
+        <b>Pass / tackle</b> <kbd>Space</kbd> &nbsp; <b>Shoot</b> hold <kbd>F</kbd><br />
+        <b>Switch player</b> <kbd>Q</kbd> &nbsp; <b>Look</b> drag &nbsp; <b>Reset view</b> <kbd>R</kbd>
+      </div>
+      <div id="touch">
+        <div id="stick"><div id="knob"></div></div>
+        <div id="pads">
+          <div data-btn="switch">SWITCH</div>
+          <div data-btn="sprint">SPRINT</div>
+          <div data-btn="pass">PASS</div>
+          <div data-btn="shoot">SHOOT</div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

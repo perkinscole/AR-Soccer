@@ -1,0 +1,32 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: #141a24; }
+body { font-family: system-ui, -apple-system, sans-serif; color: #e8edf5; -webkit-user-select: none; user-select: none; }
+#app canvas { display: block; touch-action: none; }
+
+#overlay { position: fixed; inset: 0; pointer-events: none; }
+#overlay > * { pointer-events: auto; }
+
+#top { position: absolute; top: 14px; right: 16px; left: 16px; display: flex; justify-content: flex-end; align-items: center; gap: 12px; flex-wrap: wrap; }
+#xr-note { font-size: 12px; color: #8f9bb0; max-width: 340px; text-align: right; pointer-events: none; }
+#xr-buttons { display: flex; gap: 8px; }
+#xr-buttons button { font: 600 14px system-ui, sans-serif; color: #10151d; background: #ffe14a; border: 0; border-radius: 999px; padding: 10px 18px; cursor: pointer; }
+#xr-buttons button:hover { background: #fff0a0; }
+
+#hint { position: absolute; left: 16px; bottom: 14px; font-size: 13px; line-height: 1.7; color: #b9c3d4; background: rgba(12, 16, 24, 0.7); padding: 10px 14px; border-radius: 12px; transition: opacity 1.2s 4s; pointer-events: none; }
+#hint.faded { opacity: 0.28; }
+#hint b { color: #fff; font-weight: 600; }
+kbd { font: 600 11px ui-monospace, monospace; background: #2a3344; border-radius: 4px; padding: 2px 6px; color: #fff; }
+
+#touch { display: none; }
+@media (pointer: coarse) {
+  #touch { display: block; }
+  #hint { display: none; }
+}
+#stick { position: absolute; left: 22px; bottom: 26px; width: 130px; height: 130px; border-radius: 50%; background: rgba(255, 255, 255, 0.12); border: 2px solid rgba(255, 255, 255, 0.3); touch-action: none; }
+#knob { position: absolute; left: 50%; top: 50%; width: 54px; height: 54px; margin: -27px; border-radius: 50%; background: rgba(255, 255, 255, 0.55); pointer-events: none; }
+#pads { position: absolute; right: 18px; bottom: 22px; display: grid; grid-template-columns: repeat(2, 76px); gap: 10px; }
+#pads div { height: 76px; border-radius: 50%; display: grid; place-items: center; font: 700 12px system-ui, sans-serif; letter-spacing: 0.04em; background: rgba(255, 255, 255, 0.14); border: 2px solid rgba(255, 255, 255, 0.35); touch-action: none; }
+#pads div.down { background: rgba(255, 225, 74, 0.6); }
+#pads [data-btn='shoot'] { border-color: #ff8a5c; }
+#pads [data-btn='pass'] { border-color: #7bd88f; }
+
+.in-xr #hint, .in-xr #top { display: none; }
